@@ -1,0 +1,9 @@
+<div class="hot_author">
+	<p class="reconmend">本周推荐</p>
+	<ul class="all_author">
+		<li ng-repeat="author in authors" class="clearfix">
+			<div class="head_author"><img src="{{author.avatar}}"/></div>
+			<div class="info_author"><span>{{author.name}}</span><br/><a>{{author.editor_notes}}</a></div>
+		</li>
+	</ul>
+</div>

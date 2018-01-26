@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>豆瓣一刻</title>
+    <!--网页图标-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.css" />
+    <!--小图标-->
+    <link rel="stylesheet" href="css/fonts.css" />
+    <!--判定rem大小-->
+    <script type="text/javascript" src="js/rem.js" ></script>
+    <script type="text/javascript" src="js/jquery-1.11.3.js" ></script>
+    <script type="text/javascript" src="js/angular/angular.js" ></script>
+    <script type="text/javascript" src="js/angular/angular-ui-router.js" ></script>
+    <script type="text/javascript" src="js/myself/basic.js" ></script>
+</head>
+<body ng-app='Yike' class="ng-cloak">      <!--class="ng-cloak"防止闪屏-->
+	<div id="viewport" ng-controller='ctr'>
+		<!--头部-->
+		<div class="title">
+			<i class="icon-menu" ng-click='nav($event)'></i>
+			<h4>{{title}}</h4>
+			<i class="icon-search"></i>
+	    </div>
+			
+		<!--首页内容-->
+		<div id="container">
+			
+			<div ui-view class="contain">
+				<img src="img/loading.gif" class="load"  ng-show="loaded"/>
+			</div>
+		</div>
+		<!--侧面导航栏-->
+		<div id="slideNav">
+			<h3><i class="icon-user"></i>登陆</h3>
+			<ul>
+				<li><a href="#/today"><i class="icon-home3 i01"></i><span  ng-click="nav($event)">今日一刻</span></a></li>
+				<li><a href="#/oldCon"><i class="icon-file-empty i02"></i><span  ng-click="nav($event)">往期内容</span></a></li>
+				<li><a href="#/author"><i class="icon-pencil i03"></i><span  ng-click="nav($event)">热门作者</span></a></li>
+				<li><a href="#/colum"><i class="icon-list2 i04"></i><span  ng-click="nav($event)">栏目浏览</span></a></li>
+				<li><a href="#/love"><i class="icon-heart i05"></i><span  ng-click="nav($event)">我的喜欢</span></a></li>
+				<li><a href="#/setting"><i class="icon-cog i06"></i><span  ng-click="nav($event)">设置</span></a></li>
+			</ul>
+			<dl>
+				<dd><a href=""><i class="icon-brightness-contrast"></i>夜晚</a></dd>
+				<dd><a href=""><i class="icon-download2"></i>离线</a></dd>
+			</dl>
+		</div>
+	</div>
+</body>
+
+<script>
+	
+</script>
+</html>

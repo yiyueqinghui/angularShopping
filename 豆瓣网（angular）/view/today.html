@@ -1,0 +1,32 @@
+<div class="item">
+		<!-- 日期分类 -->
+		<div class="mark">{{date | date}}</div>    <!--date为angular.js自带的时间过滤器-->
+		<ul class="posts large">
+			<!-- 文章 -->
+			<li ng-repeat="post in posts">
+				<a href="{{post.short_url}}" style="text-decoration: none;">
+				<span href="javascript:;" ng-if="post.column.name" class="tag" >{{post.column.name}}</span>
+				<div class="cont">
+					<h3 style="color: #000000;">{{post.title}}</h3>
+					<div class="brief clearfix">
+						<!-- 10001 和 10002 -->
+						<!-- 只有当display_style 10001 有类名 -->
+						<p ng-class="{only: post.display_style == 10001}" ng-if="post.display_style != 10003">
+							{{post.abstract}}
+						</p>
+						<!-- 10002 -->
+						<div class="thumb"  ng-if="post.display_style == 10002">
+							<!--<img ng-src="{{post.thumbs[0].small.url}}" class="pic"/>-->
+							<img ng-src="http://img5.imgtn.bdimg.com/it/u=2639088341,2223755776&fm=27&gp=0.jpg" class="pic"/>
+						</div>
+						<!-- 10003 -->
+						<div  class="gallery" ng-if="post.display_style == 10003">
+							<!--<img ng-Src="{{post.thumbs[0].small.url}}"  alt=""/>-->
+							<img ng-Src="http://img4.imgtn.bdimg.com/it/u=202447557,2967022603&fm=27&gp=0.jpg"  alt="tupian01"/>
+						</div>
+					</div>							
+				</div>
+			  </a>
+			</li>
+		</ul>
+	</div>

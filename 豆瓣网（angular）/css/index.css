@@ -1,0 +1,374 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+.clearfix:after {
+  content: "";
+  /*内容为“.”就是一个英文的句号而已。也可以不写。*/
+  display: block;
+  /*加入的这个元素转换为块级元素。*/
+  clear: both;
+  /*清除左右两边浮动。*/
+  visibility: hidden;
+  /*可见度设为隐藏。注意它和display:none;是有区别的。visibility:hidden;仍然占据空间，只是看不到而已；*/
+  line-height: 0;
+  /*行高为0；*/
+  height: 0;
+  /*高度为0；*/
+}
+html {
+  height: 100%;
+}
+body {
+  width: 100%;
+  height: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+}
+#viewport {
+  width: 16rem;
+  height: 100%;
+}
+#viewport .title {
+  width: 100%;
+  max-width: 16rem;
+  height: 2rem;
+  padding: 0.25rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  background: #21bba6;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+#viewport .title i {
+  position: relative;
+  top: 0.125rem;
+}
+#viewport #container {
+  width: 100%;
+  height: 100%;
+  float: right;
+}
+#viewport #container .contain::-webkit-scrollbar {
+  display: none;
+}
+#viewport #container .contain {
+  background-color: #f8f8f8;
+  width: 100%;
+  margin-top: 2rem;
+  overflow: scroll;
+}
+#viewport #container .contain .load {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+}
+#viewport #container .contain .item {
+  width: 100%;
+}
+#viewport #container .contain .item .mark {
+  width: 100%;
+  padding: 0.375rem;
+  background-color: #FFFFFF;
+  color: darkgray;
+  font-size: 0.7rem;
+  text-align: left;
+}
+#viewport #container .contain .item .posts {
+  width: 100%;
+}
+#viewport #container .contain .item .posts li {
+  border-bottom: 1px solid;
+  padding: 0.625rem 0.625rem;
+  border-bottom: 1px solid darkgrey;
+}
+#viewport #container .contain .item .posts li .tag {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  background-color: darkgray;
+  color: #FFFFFF;
+  font-size: 0.625rem;
+  border-radius: 0 0 0.375rem 0.375rem;
+  position: relative;
+  top: -0.75rem;
+}
+#viewport #container .contain .item .posts li .cont h3 {
+  font-size: 0.875rem;
+}
+#viewport #container .contain .item .posts li .cont .brief {
+  width: 100%;
+}
+#viewport #container .contain .item .posts li .cont .brief p {
+  width: 55%;
+  height: auto;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: darkgray;
+  float: left;
+}
+#viewport #container .contain .item .posts li .cont .brief .only {
+  width: 100%;
+}
+#viewport #container .contain .item .posts li .cont .brief .thumb {
+  width: 44%;
+  height: auto;
+  float: left;
+}
+#viewport #container .contain .item .posts li .cont .brief .thumb .pic {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+#viewport #container .contain .item .posts li .cont .brief .gallery {
+  width: 100%;
+  height: auto;
+}
+#viewport #container .contain .item .posts li .cont .brief .gallery img {
+  width: 100%;
+  height: auto;
+}
+#viewport #container .contain .hot_author {
+  width: 100%;
+}
+#viewport #container .contain .hot_author .reconmend {
+  padding: 0.375rem 0.5rem;
+  color: darkgray;
+  font-size: 0.875rem;
+  border-bottom: 1px solid darkgray;
+}
+#viewport #container .contain .hot_author .all_author {
+  list-style: none;
+}
+#viewport #container .contain .hot_author .all_author li {
+  padding: 0.625rem 0.75rem;
+  width: 100%;
+  height: 3.75rem;
+}
+#viewport #container .contain .hot_author .all_author li .head_author {
+  float: left;
+  width: 20%;
+  height: 2.5rem;
+  margin-right: 0.375rem;
+}
+#viewport #container .contain .hot_author .all_author li .head_author img {
+  width: 100%;
+  height: 100%;
+}
+#viewport #container .contain .hot_author .all_author li .info_author {
+  float: left;
+  width: 70%;
+  height: 3.125rem;
+  color: darkgray;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  box-sizing: border-box;
+  padding-bottom: 0.625rem;
+  border-bottom: 1px solid darkgrey;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#viewport #container .contain .hot_author .all_author li .info_author span {
+  color: #000000;
+  font-weight: 600;
+}
+#viewport #container .contain .columns {
+  width: 100%;
+}
+#viewport #container .contain .columns .colums_all dd {
+  width: 50%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  float: left;
+  font-size: 0.75rem;
+  border-right: 1px solid darkgray;
+  border-bottom: 1px solid darkgray;
+}
+#viewport #container .contain .columns .colums_all dd img {
+  width: 25%;
+  height: auto;
+}
+#viewport #container .contain .columns .colums_all dd b {
+  font-size: 0.7rem;
+  color: #0f9c89;
+  margin-top: -0.125rem;
+}
+#viewport #container .contain .columns .colums_all dd span {
+  color: darkgray;
+  font-size: 0.55rem;
+  margin-top: -0.125rem;
+}
+#viewport #container .contain .mylove {
+  width: 100%;
+}
+#viewport #container .contain .mylove .love_num {
+  padding: 0.375rem 0.75rem;
+  color: darkgray;
+  font-size: 0.625rem;
+  background: #FFFFFF;
+}
+#viewport #container .contain .mylove .love_one {
+  width: 100%;
+  padding: 0.25rem 0.5rem;
+  border-top: 1px solid darkgrey;
+}
+#viewport #container .contain .mylove .love_one .biaoqian {
+  display: inline-block;
+  padding: 0.375rem 0.5rem;
+  background-color: #b9b9b9;
+  font-size: 0.75rem;
+  border-radius: 0 0 10px 10px;
+  color: #FFFFFF;
+  position: relative;
+  top: -0.25rem;
+}
+#viewport #container .contain .mylove .love_one h4 {
+  font-size: 0.8rem;
+  margin-bottom: 0.625rem;
+}
+#viewport #container .contain .mylove .love_one dl {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+#viewport #container .contain .mylove .love_one dl dd {
+  width: 30%;
+  height: auto;
+}
+#viewport #container .contain .mylove .love_one dl dd img {
+  width: 100%;
+  height: auto;
+}
+#viewport #container .contain .mylove .love_one .love_info {
+  width: 100%;
+  list-style: none;
+}
+#viewport #container .contain .mylove .love_one .love_info .love_recon {
+  width: 73%;
+  line-height: 1.6;
+  font-size: 0.7rem;
+  color: darkgray;
+  float: left;
+  margin-right: 0.375rem;
+}
+#viewport #container .contain .mylove .love_one .love_info .love_png {
+  width: 23%;
+  height: 100%;
+  float: left;
+}
+#viewport #container .contain .mylove .love_one .love_info .love_png img {
+  width: 100%;
+}
+#viewport #container .contain .setting {
+  width: 100%;
+}
+#viewport #container .contain .setting .set_con {
+  margin-top: 1.75rem;
+  border-top: 1px solid darkgray;
+  border-bottom: 1px solid darkgray;
+  background: #FFFFFF;
+}
+#viewport #container .contain .setting .set_con dd {
+  margin-left: 0.875rem;
+  line-height: 1.5;
+  font-size: 0.75rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid darkgray;
+  color: #000000;
+}
+#viewport #container .contain .setting .set_con dd:last-child {
+  border-bottom: none;
+}
+#slideNav {
+  width: 9.5rem;
+  height: 100%;
+  padding-top: 1rem;
+  padding-bottom: 0;
+  background: #e7eaee;
+  position: fixed;
+  left: -9.5rem;
+  top: 0;
+}
+#slideNav h3 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding-left: 0.75rem;
+}
+#slideNav h3 i {
+  display: inline-block;
+  width: 2rem;
+  padding: 0.5rem;
+  background: #FFFFFF;
+  border-radius: 50%;
+  font-size: 1.125rem;
+  margin-right: 0.375rem;
+  margin-bottom: 0.875rem;
+}
+#slideNav ul li {
+  list-style: none;
+  margin-bottom: 0.5rem;
+  padding-left: 0.75rem;
+}
+#slideNav ul li i {
+  display: inline-block;
+  width: 1.25rem;
+  padding: 0.25rem;
+  margin-right: 0.5rem;
+  background: #FFFFFF;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #FFFFFF;
+}
+#slideNav ul li .i01 {
+  background: #46c8ce;
+}
+#slideNav ul li .i02 {
+  background: #62c98d;
+}
+#slideNav ul li .i03 {
+  background: #eb9d58;
+}
+#slideNav ul li .i04 {
+  background: #5293d0;
+}
+#slideNav ul li .i05 {
+  background: #ff7777;
+}
+#slideNav ul li .i06 {
+  background: #fdcc65;
+}
+#slideNav a {
+  text-decoration: none;
+  color: #000000;
+}
+#slideNav dl {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+#slideNav dl dd {
+  width: 50%;
+  padding: 0.25rem 0;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+#slideNav dl dd i {
+  display: inline-block;
+  width: 1.25rem;
+  padding: 0.15rem;
+  border-radius: 50%;
+  background: #8a8a8a;
+  color: #FFFFFF;
+}
