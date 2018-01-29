@@ -1,2 +1,3 @@
 # angularShopping
 angular技术， 豆瓣数据，app 
+适合初学者学习练手，如果帮助，请帮忙点个star
